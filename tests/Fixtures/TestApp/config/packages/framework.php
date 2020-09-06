@@ -1,0 +1,7 @@
+<?php
+
+$container->loadFromExtension('framework', [
+	'test' => true,
+	'router' => [ 'utf8' => true ],
+	'session' => [ 'storage_id' => 'session.storage.mock_file' ]
+]);

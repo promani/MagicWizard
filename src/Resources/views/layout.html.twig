@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block layout %}
+    {% include 'header.html.twig' %}
+    <h3 class="center-align white-text py-5">Logo</h3>
+    <div class="container">
+        <div class="card white p-4" style="min-height: 50vh">
+            <div class="card-content">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 0; width: 100%">
+        {% include 'footer.html.twig' %}
+    </div>
+{% endblock %}

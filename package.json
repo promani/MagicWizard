@@ -1,0 +1,35 @@
+{
+    "browserslist": [
+        "defaults"
+    ],
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.30.0",
+        "axios": "^0.19.2",
+        "core-js": "^3.0.0",
+        "eslint": "^6.7.2",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.19.1",
+        "eslint-plugin-vue": "^6.0.1",
+        "node-sass": "^4.13.0",
+        "regenerator-runtime": "^0.13.2",
+        "sass-loader": "^8.0.0",
+        "vue": "^2.6.11",
+        "vue-loader": "^15.9.1",
+        "vue-template-compiler": "^2.6.11",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress",
+        "lint": "node_modules/.bin/eslint assets/** --ignore-pattern *.scss --ignore-pattern *.gif --ignore-pattern *.png"
+    },
+    "dependencies": {
+        "jquery": "^3.5.1",
+        "material-design-icons": "^3.0.1",
+        "materialize-css": "^1.0.0"
+    }
+}
