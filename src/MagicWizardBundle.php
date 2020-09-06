@@ -1,6 +1,6 @@
 <?php
 
-namespace MagicWizardBundle;
+namespace Promani\MagicWizardBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

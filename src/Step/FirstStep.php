@@ -1,9 +1,9 @@
 <?php
 
-namespace MagicWizardBundle\Step;
+namespace Promani\MagicWizardBundle\Step;
 
-use MagicWizardBundle\Model\Step;
-use MagicWizardBundle\Form\Step1Type;
+use Promani\MagicWizardBundle\Model\Step;
+use Promani\MagicWizardBundle\Form\Step1Type;
 
 class FirstStep extends Step
 {

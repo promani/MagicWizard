@@ -1,6 +1,6 @@
 <?php
 
-namespace MagicWizardBundle\DependencyInjection;
+namespace Promani\MagicWizardBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

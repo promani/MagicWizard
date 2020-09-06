@@ -1,6 +1,6 @@
 <?php
 
-namespace MagicWizardBundle\Tests;
+namespace Promani\MagicWizardBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

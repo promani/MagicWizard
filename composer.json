@@ -40,13 +40,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MagicWizardBundle\\": "src/"
+            "Promani\\MagicWizardBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "TestApp\\": "tests/Fixtures/TestApp/src/",
-            "MagicWizardBundle\\Tests\\": "tests/"
+            "Promani\\MagicWizardBundle\\Tests\\": "tests/"
         }
     },
     "conflict": {

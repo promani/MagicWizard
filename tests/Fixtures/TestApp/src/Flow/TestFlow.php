@@ -2,7 +2,7 @@
 
 namespace TestApp\Flow;
 
-use MagicWizardBundle\Model\Flow;
+use Promani\MagicWizardBundle\Model\Flow;
 use TestApp\Step\FirstStep;
 use TestApp\Step\SecondStep;
 

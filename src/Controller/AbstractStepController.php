@@ -1,8 +1,8 @@
 <?php
 
-namespace MagicWizardBundle\Controller;
+namespace Promani\MagicWizardBundle\Controller;
 
-use MagicWizardBundle\Model\Flow;
+use Promani\MagicWizardBundle\Model\Flow;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;

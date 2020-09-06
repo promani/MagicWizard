@@ -2,7 +2,7 @@
 
 namespace TestApp\Controller;
 
-use MagicWizardBundle\Controller\AbstractStepController;
+use Promani\MagicWizardBundle\Controller\AbstractStepController;
 use Symfony\Component\Routing\Annotation\Route;
 use TestApp\Flow\TestFlow;
 

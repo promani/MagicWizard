@@ -2,7 +2,7 @@
 
 namespace TestApp\Step;
 
-use MagicWizardBundle\Model\Step;
+use Promani\MagicWizardBundle\Model\Step;
 use TestApp\Form\Step1Type;
 
 class FirstStep extends Step

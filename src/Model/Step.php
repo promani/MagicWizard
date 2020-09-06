@@ -1,6 +1,6 @@
 <?php
 
-namespace MagicWizardBundle\Model;
+namespace Promani\MagicWizardBundle\Model;
 
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
