@@ -1,0 +1,23 @@
+{% extends '@MagicWizard/base.html.twig' %}
+{% block layout %}
+    {% include '@MagicWizard/header.html.twig' %}
+    <div class="text-center text-white py-4">
+        {% if mw.logo_url %}
+            <img src="{{ asset(mw.logo_url) }}" alt="logo"/>
+        {% elseif mw.company_name %}
+            <h3 class="text-center">{{ mw.company_name }}</h3>
+        {% else %}
+            <i class="fa fa-3x fa-hat-wizard"></i>
+        {% endif %}
+    </div>
+    <div class="container">
+        <div class="card p-4" style="min-height: 50vh">
+            <div class="card-content mx-3">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 0; width: 100%">
+        {% include '@MagicWizard/footer.html.twig' %}
+    </div>
+{% endblock %}

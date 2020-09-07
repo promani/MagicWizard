@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, noimageindex, notranslate, nocache" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="generator" content="MagicWizard" />
+        <title>{% block title %}Test{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/magicwizard/app.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        {% block layout %}{% endblock %}
+    </body>
+
+    {% block javascript %}
+        <script src="{{ asset('bundles/magicwizard/app.js') }}"></script>
+    {% endblock javascript %}
+</html>

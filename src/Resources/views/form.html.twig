@@ -1,0 +1,16 @@
+{% if step is defined and step %}
+    <div style="text-align: center">
+        <h1>{{ step.props.title }}</h1>
+        {% if step.props.subtitle is defined and step.props.subtitle %}
+            <h4>{{ step.props.subtitle }}</h4>
+        {% endif %}
+        {% if step.props.description is defined and step.props.description %}
+            <p>{{ step.props.description }}</p>
+        {% endif %}
+    </div>
+{% else %}
+    <h1>This is an end</h1>
+{% endif %}
+{% if form is defined %}
+    {{ form(form) }}
+{% endif %}
