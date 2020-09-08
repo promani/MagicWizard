@@ -56,7 +56,7 @@ abstract class AbstractStepController extends AbstractController
             $data = array_merge($data, $form->getData());
             if ($step->getCallback()) {
                 try {
-                    call_user_func($step->getCallback(), $data);
+	                call_user_func_array ($step->getCallback(), [$data, $this->container]);
                 } catch (\Exception $exception) {
                     if (!$step->isAllowFail()) {
                         return $this->json($exception->getMessage(), 404);

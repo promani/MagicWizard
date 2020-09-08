@@ -1,6 +1,9 @@
 .idea
 .php_cs.cache
 composer.lock
+package-lock.json
+symfony.lock
+yarn.lock
 .phpunit.result.cache
 /phpunit.xml
 vendor/*

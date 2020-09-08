@@ -4,7 +4,7 @@ I think it lacks nothing and is very well achieved. Why is it not used more?
 This library only tries to show its potential by integrating the solution with Vue.js.
 
 ## Instllation
-En un proyecto de symfony
+In a Symfony project install it via composer
 ```
 composer require promani\magic-wizard
 ```
@@ -74,7 +74,7 @@ class TestController extends AbstractStepController
 Did you notice the route? it is important that you do something very similar.
 
 Go to see your Wizard:
-![wizard](https://i.ibb.co/BN5GWS9/wizard.png "Logo Title Text 1")
+![wizard](https://i.ibb.co/BN5GWS9/wizard.png "Demo")
 
 The information that is sent by the form is validated with all the features that the forms have. 
 If the form is valid, the UI go to the next step with no refresh and save the information sent in the session. 
@@ -109,6 +109,18 @@ public function isAllowFail()
     return false;
 }
 ```
+Something like that work as follow:
+```php
+public function getCallback()
+{
+    return function ($data) {
+        throw new \Exception(sprintf('You have sended %s fields', count($data)));
+    };
+}
+```
+![wizard](https://i.ibb.co/3pc7Kwj/wizard.png "Error alert")
+
+
 You can skip a step with a condition. To do that, simply add:
 ```php
 public function getNextStep()
@@ -121,13 +133,10 @@ public function condition()
     return 'data.name == "Rambo"';
 }
 ```
-
 To write the condition see Expression Language [documentation](https://symfony.com/doc/current/components/expression_language.html). 
 You have in the data variable all the info of all Steps.
-
 ### In summary:
 You have a few entrypoints prefixed by your router configuration in the controller:
-
 `/prefix/form` For GET and the POST forms
 
 `/prefix/clear` For clear all the information submited for the user
@@ -136,4 +145,81 @@ You have a few entrypoints prefixed by your router configuration in the controll
 
 For this last endpoint may be you want implement a back button.
 
-You are able to have many Controllers with diferent routes for diferent proposits. Try it out!
+You are able to have many Controllers with diferent routes for diferent proposits. Not magic enought? Try it out!
+
+### A case of use
+Imagine your registration in several steps with complex logic between steps: Magic Wizard can Handle it.
+The flow
+```php
+class RegistrationFlow extends Flow
+{
+	public function getSteps(): array
+	{
+		return [
+			new UserInfoStep(),
+			new AgeStep(),
+			new ConfirmDataStep(),
+			new SuccessStep(),
+			new FilureStep(),
+		];
+	}
+
+}
+```
+The condition and nextStep for second step:
+```php
+public function getCondition()
+{
+    return 'data.age > 13';
+}
+
+public function getNextStep()
+{
+    return FilureStep::class;
+}
+```
+The formType for third step:
+```php
+class ConfirmDataType extends AbstractType
+{
+	public function buildForm(FormBuilderInterface $builder, array $options)
+    	{
+    		$builder
+    			->add('username', TextType::class, ['disabled' => 'true'])
+    			->add('age', NumberType::class, ['disabled' => 'true'])
+    			->add('submit', SubmitType::class)
+    		;
+    	}
+}
+```
+
+At this point you hace this:
+![wizard](https://i.ibb.co/wYrbTrN/wizard.png "Confirm data step")
+
+The success callback for third step:
+```php
+public function getCallback()
+{
+    return function ($data, $container) {
+        $em = $container->get('doctrine')->getManager();
+        $user = new User($data['username'], $data['password']);
+        $user->setAge($data['age']);
+        $em->persist($user);
+        $em->flush();
+    };
+}
+```
+The failure message for FailureStep:
+```php
+class FirstStep extends Step
+{
+	public $title = 'Sorry!';
+	public $subtitle = 'You are too young for register with us';
+	public $image = 'baby.png';
+}
+```
+
+At last you get:
+
+![wizard](https://i.ibb.co/rMVwR8c/wizard.png "Failure step")
+

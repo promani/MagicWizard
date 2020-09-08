@@ -1,5 +1,4 @@
 import '../scss/app.scss';
-import 'bootstrap';
 
 import Vue from 'vue';
 import App from './main';

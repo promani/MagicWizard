@@ -1,10 +1,6 @@
 {
   "bundles/magicwizard/app.css": "/bundles/magicwizard/app.css",
   "bundles/magicwizard/app.js": "/bundles/magicwizard/app.js",
-  "bundles/magicwizard/fonts/fa-brands-400.ttf": "/bundles/magicwizard/fonts/fa-brands-400.1776173e.ttf",
-  "bundles/magicwizard/fonts/fa-brands-400.woff": "/bundles/magicwizard/fonts/fa-brands-400.28d8b8fc.woff",
-  "bundles/magicwizard/fonts/fa-brands-400.woff2": "/bundles/magicwizard/fonts/fa-brands-400.37913cdf.woff2",
-  "bundles/magicwizard/fonts/fa-brands-400.eot": "/bundles/magicwizard/fonts/fa-brands-400.bfcc3384.eot",
   "bundles/magicwizard/fonts/fa-regular-400.eot": "/bundles/magicwizard/fonts/fa-regular-400.0c6f12b9.eot",
   "bundles/magicwizard/fonts/fa-regular-400.woff2": "/bundles/magicwizard/fonts/fa-regular-400.c3c2ab4f.woff2",
   "bundles/magicwizard/fonts/fa-regular-400.ttf": "/bundles/magicwizard/fonts/fa-regular-400.c9c57c0f.ttf",
@@ -13,7 +9,6 @@
   "bundles/magicwizard/fonts/fa-solid-900.woff2": "/bundles/magicwizard/fonts/fa-solid-900.4055b057.woff2",
   "bundles/magicwizard/fonts/fa-solid-900.ttf": "/bundles/magicwizard/fonts/fa-solid-900.a480ec97.ttf",
   "bundles/magicwizard/fonts/fa-solid-900.eot": "/bundles/magicwizard/fonts/fa-solid-900.dfaa060a.eot",
-  "bundles/magicwizard/images/fa-brands-400.svg": "/bundles/magicwizard/images/fa-brands-400.63b56623.svg",
   "bundles/magicwizard/images/fa-regular-400.svg": "/bundles/magicwizard/images/fa-regular-400.1b536b78.svg",
   "bundles/magicwizard/images/fa-solid-900.svg": "/bundles/magicwizard/images/fa-solid-900.3e2bc2ff.svg"
 }
