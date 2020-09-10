@@ -2,6 +2,7 @@
 Symfony has a great forms library. 
 I think it lacks nothing and is very well achieved. Why is it not used more?
 This library only tries to show its potential by integrating the solution with Vue.js.
+The implementation is heavy inspired in [EasyAdminBundle](https://github.com/EasyCorp/EasyAdminBundle)
 
 ## Instllation
 In a Symfony project install it via composer
@@ -193,7 +194,7 @@ class ConfirmDataType extends AbstractType
 }
 ```
 
-At this point you hace this:
+At this point you have this:
 ![wizard](https://i.ibb.co/wYrbTrN/wizard.png "Confirm data step")
 
 The success callback for third step:
@@ -209,6 +210,8 @@ public function getCallback()
     };
 }
 ```
+> WARNING: You can't allways get what you want. The container is a minimun conteiner that contains a few services.
+
 The failure message for FailureStep:
 ```php
 class FirstStep extends Step
