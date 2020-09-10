@@ -17,7 +17,6 @@ class Step1Type extends AbstractType
 		$builder
 			->add('name', TextType::class)
 			->add('email', EmailType::class)
-			->add('biography', TextareaType::class)
 			->add('age', NumberType::class)
 			->add('submit', SubmitType::class)
 		;

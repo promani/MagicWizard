@@ -23,7 +23,7 @@ class Test extends WebTestCase
 	public function testPostForm()
 	{
 		$client = static::createClient();
-		$client->request('POST', '/test/form');
+		$client->request('POST', '/test/form', ['step1' => ['name' => 'john', 'email' => 'john@example.com', 'age' => 15]]);
 		$this->assertEquals(200, $client->getResponse()->getStatusCode());
 	}
 }
